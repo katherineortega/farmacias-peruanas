@@ -1,0 +1,17 @@
+{
+    "extends": "../tslint.json",
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            "farmacias-peruanas",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "farmacias-peruanas",
+            "kebab-case"
+        ]
+    }
+}
