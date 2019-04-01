@@ -1,0 +1,38 @@
+@import "~src/sass/variables"
+@import "~bootstrap/scss/mixins/breakpoints"
+
+
+.user-list
+  height: 100%
+  align-items: center
+  display: flex
+
+  &-title
+    font-weight: 300
+
+  .result
+    font-size: 3.5rem
+
+  .first
+    background-color: lighten($fourth-color, 10%)
+
+  .second
+    background-color: $third-color-light
+
+  .third
+    background-color: $primary-color-light
+
+  .fourth
+    background-color: $secondary-color-dark
+
+  .view-more
+    color: $primary-color
+    text-decoration: none
+
+
+@include media-breakpoint-up(md)
+  .user-list
+    padding: 2rem
+
+  .result
+    font-size: 5rem

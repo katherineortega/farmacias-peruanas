@@ -1,0 +1,57 @@
+<section class="user-list">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center mt-4">
+        <h3 class="user-list-title">INFORMACIÓN DE USUARIOS</h3>
+      </div>
+      <div class="col-12 mt-4 mb-5">
+        <div class="row">
+          <div class="col-12 col-md-6 mt-3">
+            <mat-card class="first h-100 text-center">
+              <h5>Nº Total de clientes</h5>
+              <p class="result">{{totalUser}}</p>
+            </mat-card>
+          </div>
+          <div class="col-12 col-md-6 mt-3">
+            <mat-card class="second h-100 text-center">
+              <h5>Promedio de edad</h5>
+              <p class="result">{{ageAverage}}</p>
+            </mat-card>
+          </div>
+          <div class="col-12 col-md-6 mt-3">
+            <mat-card class="third h-100 text-center">
+              <h5>Desviación estandar de edades</h5>
+              <p class="result">{{DSage}}</p>
+            </mat-card>
+          </div>
+          <div class="col-12 col-md-6 mt-3">
+            <mat-card class="fourth h-100 text-center">
+              <h5>Rango de edad</h5>
+              <p class="result">{{ageRange}}</p>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-right mb-4">
+        <a routerLink="informacion-general" class="view-more">>> Ver Listado de usuarios</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Nº total de clientes-->
+<!--Promedio de edad-->
+<!--Desviaciòn estandar de edades-->
+<!--Edad mayor y menor-->
+
+
+<!--Lista de clientes + fecha probable de muerte-->
+<!--<ul>-->
+<!--  <li class="text" *ngFor="let item of items | async">-->
+<!--    <mat-card>{{item.name}} <i class="fa fa-heart"></i></mat-card>-->
+<!--  </li>-->
+<!--</ul>-->

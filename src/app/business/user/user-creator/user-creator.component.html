@@ -1,0 +1,31 @@
+<div class="row h-100 align-items-center">
+  <div class="col-12">
+    <h3 class="user-creator-title text-center">CREAR USUARIO</h3>
+    <div class="user-creator mt-5">
+      <form (ngSubmit)="saveUser(userForm.value)" [formGroup]="userForm" autocomplete="off" novalidate>
+        <mat-form-field>
+          <input matInput formControlName="name" placeholder="Nombre" required>
+          <mat-error *ngIf="hasError('name', 'required')">Ingresar nombre</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="mt-2">
+          <input matInput formControlName="lastname" placeholder="Apellido" required>
+          <mat-error *ngIf="hasError('name', 'required')">Ingresar apellido</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="mt-2">
+          <input matInput formControlName="age" placeholder="Edad" min="0" type="number" required>
+          <mat-error *ngIf="hasError('name', 'required')">Ingresar edad</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="mt-2">
+          <input matInput [matDatepicker]="birthDate" formControlName="birthdate" placeholder="Fecha de nacimiento" readonly required>
+          <mat-datepicker-toggle matSuffix [for]="birthDate"></mat-datepicker-toggle>
+          <mat-datepicker #birthDate></mat-datepicker>
+          <mat-error *ngIf="hasError('name', 'required')">Ingresar fecha de nacimiento</mat-error>
+        </mat-form-field>
+        <button type="submit" class="btn btn-secondary mt-4 w-100" [class.btn-success]="userForm.valid" [disabled]="!userForm.valid">Crear</button>
+      </form>
+    </div>
+  </div>
+</div>
