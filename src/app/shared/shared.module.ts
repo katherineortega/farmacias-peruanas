@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {User} from "./models/user";
 import {FirebaseService} from "./services/firebase/firebase.service";
 
 @NgModule({
@@ -9,7 +8,6 @@ import {FirebaseService} from "./services/firebase/firebase.service";
     CommonModule
   ],
   providers: [
-    User,
     FirebaseService
   ]
 })
